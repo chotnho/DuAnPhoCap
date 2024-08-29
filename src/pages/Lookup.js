@@ -77,6 +77,7 @@ const Lookup = () => {
   React.useEffect(() => {
     const searchParams = new URLSearchParams(query).toString();
     navigate(`?${searchParams}`);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [query.pageIndex, query.pageSize, query.soPhieu, query.hoVaTen, query.ChuHo, query.GioiTinh, query.YearFrom, query.YearTo])
 
   const getThongKe6Den10s = async () => {

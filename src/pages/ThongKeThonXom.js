@@ -74,6 +74,7 @@ const ThongKeThonXom = () => {
     const searchParams = new URLSearchParams(query).toString();
     navigate(`?${searchParams}`);
     getThongKeByThonAps();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [query.id]);
 
   React.useEffect(() => {
