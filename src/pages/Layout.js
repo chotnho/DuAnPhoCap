@@ -1,11 +1,9 @@
-import { Fragment } from "react";
-import { Outlet, Link } from "react-router-dom";
-import { CiLogin } from "react-icons/ci";
 import { Container } from "@mui/material";
+import { Dropdown } from "antd";
+import React, { Fragment } from "react";
+import { CiLogin } from "react-icons/ci";
+import { Link, Outlet } from "react-router-dom";
 import logo from "../assets/images/logo.jpg";
-import { useNavigate } from "react-router-dom";
-import React from "react";
-import { Button, Dropdown, Space } from "antd";
 import { useAuth } from "../hooks/AuthProvider";
 const items = [
   {

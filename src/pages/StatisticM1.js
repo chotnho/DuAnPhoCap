@@ -82,6 +82,7 @@ const StatisticM1 = () => {
     const searchParams = new URLSearchParams(query).toString();
     navigate(`?${searchParams}`);
     getThongKeByTuois()
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [query.age])
 
   console.log(dataSearch,'dataSearch');

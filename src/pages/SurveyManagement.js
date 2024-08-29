@@ -1,5 +1,3 @@
-import * as React from 'react';
-import { Fragment } from "react";
 import { Button, TablePagination } from "@mui/material";
 import Paper from '@mui/material/Paper';
 import { styled } from "@mui/material/styles";
@@ -9,16 +7,18 @@ import TableCell, { tableCellClasses } from '@mui/material/TableCell';
 import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
-import ModalPhieuDieuTra from '../components/ModalPhieuDieuTra';
-import { googleAPI } from '../apis/google.api';
-import { toast } from 'react-toastify';
+import * as React from 'react';
+import { Fragment } from "react";
 import { MdDelete } from 'react-icons/md';
 import { RiEdit2Fill } from 'react-icons/ri';
 import { useLocation, useNavigate } from 'react-router-dom';
-import { HookExportExcelMau } from '../hooks/HookExportExcelMau';
-import ModalExcelComponent from '../components/ModalExcelComponent';
-import SelectComponent from '../components/SelectComponent';
+import { toast } from 'react-toastify';
+import { googleAPI } from '../apis/google.api';
 import { thonXomAPI } from '../apis/thonXom.api';
+import ModalExcelComponent from '../components/ModalExcelComponent';
+import ModalPhieuDieuTra from '../components/ModalPhieuDieuTra';
+import SelectComponent from '../components/SelectComponent';
+import { HookExportExcelMau } from '../hooks/HookExportExcelMau';
 
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
@@ -82,6 +82,7 @@ const SurveyManagement = () => {
     const navigate = useNavigate();
     const location = useLocation();
   
+    // eslint-disable-next-line no-unused-vars
     const searchParams = new URLSearchParams(location.search);
 
     const query = {
@@ -204,6 +205,7 @@ const SurveyManagement = () => {
         const searchParams = new URLSearchParams(query).toString();
         navigate(`?${searchParams}`);
         getPagingDoiTuongs()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [pageIndex, pageSize, search])
 
     const getAllThonAps = async () => {

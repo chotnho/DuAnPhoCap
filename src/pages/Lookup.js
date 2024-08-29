@@ -94,6 +94,8 @@ const Lookup = () => {
 
   React.useEffect(() => {
     getThongKe6Den10s();
+
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [query.pageIndex, query.pageSize]);
 
   const handleChangePage = (event, newPage) => {
